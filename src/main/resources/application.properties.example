@@ -1,0 +1,21 @@
+# Database
+spring.datasource.url=jdbc:mysql://localhost:3306/ratelimiter_db
+spring.datasource.username=your_mysql_username
+spring.datasource.password=your_mysql_password
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# JPA
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+# Redis
+spring.data.redis.host=localhost
+spring.data.redis.port=6379
+
+# Server
+server.port=8080
+
+# Rate limit settings
+app.rate-limit.max-requests-per-minute=100
+app.rate-limit.window-size-seconds=60
