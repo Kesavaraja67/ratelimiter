@@ -2,8 +2,9 @@
 
 A production-grade API rate limiting engine built with Java and Spring Boot. Uses a sliding window algorithm backed by Redis to enforce per-user request limits in real time, with full request history persisted in MySQL.
 
+🌐 **Live Dashboard:** [https://ratelimiterui.pages.dev](https://ratelimiterui.pages.dev)  
+⚙️ **API Base URL:** `https://ratelimiter-production-9542.up.railway.app`
 ---
-
 ## What It Does
 
 Every incoming API request passes through a filter that validates the caller's API key, runs a sliding window check against Redis, and either allows or rejects the request. Allowed and blocked requests are both logged to MySQL for analytics and anomaly tracking. A nightly scheduler purges records older than 30 days automatically.
